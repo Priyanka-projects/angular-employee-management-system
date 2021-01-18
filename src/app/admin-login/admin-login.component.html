@@ -1,0 +1,40 @@
+<html>
+
+<body>
+<div>
+<header>
+<ul>
+<div class="button-div">
+<li>
+  <a routerLink = "/welcome">
+<button class="button-style-nav" type="button">Home</button></a>
+</li>
+
+<li><a><button class="button-style-nav" (click)="showLogin()" type="button">LOGIN</button></a></li>
+<li><a><button class="button-style-nav" type="button">ABOUT THE COMPANY</button></a></li>
+</div>
+</ul>
+</header>
+</div>
+<router-outlet></router-outlet>
+<hr>
+
+<div class="image">
+<img src="assets/images/officepic1.png" width=100%>
+<div class="centered"><h1>ADMIN    LOGIN    PORTAL</h1>
+</div>
+
+<div id="overlay"  *ngIf="showForm">
+  <div id="divform" ><app-login></app-login></div>
+</div>
+</div>
+<hr>
+<div>
+<footer>
+  <p>For any problem mail us at<br>
+  <a href="mailto:problems@gmail.com">problems@gmail.com</a></p>
+</footer>
+</div>
+
+</body>
+</html>
